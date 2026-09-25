@@ -19,6 +19,7 @@ const Permit = () => import('@/views/permit/index.vue')
 const Contractor = () => import('@/views/contractor/index.vue')
 const Training = () => import('@/views/training/index.vue')
 const Settlement = () => import('@/views/settlement/index.vue')
+const Dispatch = () => import('@/views/dispatch/index.vue')
 
 const router = createRouter({
   history: createWebHistory(),
@@ -42,6 +43,7 @@ const router = createRouter({
     { path: '/contractor', name: 'contractor', component: Contractor },
     { path: '/training', name: 'training', component: Training },
     { path: '/settlement', name: 'settlement', component: Settlement },
+    { path: '/dispatch', name: 'dispatch', component: Dispatch },
   ],
 })
 

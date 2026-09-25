@@ -28,6 +28,34 @@ class EntryPayload(BaseModel):
     remark: str | None = None
 
 
+class DispatchItem(BaseModel):
+    """批量派车里一台车的派车请求。"""
+
+    task_key: str = ""
+    vehicle_id: int = 0
+    driver_id: int = 0
+    start: str = ""
+    end: str = ""
+    priority: str = "中"
+
+
+class DispatchBatchPayload(BaseModel):
+    """一次批量派车：batch_id 是幂等键，重复提交返回首次结果。"""
+
+    batch_id: str = ""
+    items: list[DispatchItem] = Field(default_factory=list)
+
+
+class DispatchBatchResult(BaseModel):
+    """批量派车结果：逐台给出成功、顺延或失败，失败单台标注原因。"""
+
+    ok: bool
+    message: str
+    batch_id: str = ""
+    summary: dict[str, int] = Field(default_factory=dict)
+    results: list[dict[str, Any]] = Field(default_factory=list)
+
+
 
 class StationEntry(BaseModel):
     """电站档案明细结构。"""

@@ -11,6 +11,7 @@ const Cleaning = () => import('@/views/cleaning/index.vue')
 const Inspection = () => import('@/views/inspection/index.vue')
 const Defect = () => import('@/views/defect/index.vue')
 const Repair = () => import('@/views/repair/index.vue')
+const Dispatch = () => import('@/views/dispatch/index.vue')
 const Sparepart = () => import('@/views/sparepart/index.vue')
 const Generation = () => import('@/views/generation/index.vue')
 const Curtail = () => import('@/views/curtail/index.vue')
@@ -34,6 +35,7 @@ const router = createRouter({
     { path: '/inspection', name: 'inspection', component: Inspection },
     { path: '/defect', name: 'defect', component: Defect },
     { path: '/repair', name: 'repair', component: Repair },
+    { path: '/dispatch', name: 'dispatch', component: Dispatch },
     { path: '/sparepart', name: 'sparepart', component: Sparepart },
     { path: '/generation', name: 'generation', component: Generation },
     { path: '/curtail', name: 'curtail', component: Curtail },

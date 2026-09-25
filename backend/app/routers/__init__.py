@@ -24,5 +24,6 @@ from app.routers import permit as router_permit
 from app.routers import contractor as router_contractor
 from app.routers import training as router_training
 from app.routers import settlement as router_settlement
+from app.routers import dispatch as router_dispatch
 
-ROUTERS = [router_station, router_array, router_inverter, router_combiner, router_stringmon, router_irradiance, router_cleaning, router_inspection, router_defect, router_repair, router_sparepart, router_generation, router_curtail, router_alarm, router_permit, router_contractor, router_training, router_settlement]
+ROUTERS = [router_station, router_array, router_inverter, router_combiner, router_stringmon, router_irradiance, router_cleaning, router_inspection, router_defect, router_repair, router_sparepart, router_generation, router_curtail, router_alarm, router_permit, router_contractor, router_training, router_settlement, router_dispatch]
